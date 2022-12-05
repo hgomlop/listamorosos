@@ -1,24 +1,7 @@
-# README
+# Lista de Morosos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello my name is Hector Gomez
 
-Things you may want to cover:
+This is my first ever Ruby on Rails app. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app consists on an owe list where you can create an account and list of your debtors.
