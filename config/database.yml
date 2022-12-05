@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: udb_moro_miap
+  password: MKfNyKMYUsFQYPbd9Bjk0w==
+  host: db_postg
+  port: 5432
+  database: db_moro_miap
