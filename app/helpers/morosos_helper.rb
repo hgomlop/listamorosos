@@ -1,0 +1,2 @@
+module MorososHelper
+end

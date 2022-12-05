@@ -1,0 +1,66 @@
+ <div class="mx-auto" style="width: 95%;"> 
+  <div class="card shadow">
+    <div class="card-header">
+      <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    </div>
+      <br/>
+    <div class="card-body">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field form-group shadow-sm">
+          <%= f.email_field :email, class:"form-control", placeholder:"Email", autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <br/>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          
+          <div class="field form-group shadow-sm">
+          <%= f.password_field :password, class:"form-control", placeholder:"Nueva Contraseña (Dejar en blanco si no quiere cambiarla)", autocomplete: "new-password" %>
+          </div>
+          
+        <br/>
+        
+        <div class="field form-group shadow-sm">
+        <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Repetir Contraseña", autocomplete: "new-password" %>
+        </div>
+        
+        <br/>
+        
+        <div class="field form-group shadow-sm">
+        <%= f.password_field :current_password, class:"form-control", placeholder:"Contraseña Actual (Necesita su contraseña actual para confirmar los cambios", autocomplete: "current-password" %>
+        </div>
+        
+        <br/>
+        
+        <div class="actions">
+            <%= f.submit "Guardar cambios", class:"btn btn-secondary shadow-sm" %>             
+            <%= link_to "Volver", :back, class:"btn btn-secondary shadow-sm" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="mx-auto" style="width: 60%;">
+  <hr class="opacity-0">
+  <hr/ class="border border-dark border-1.5 opacity-75 shadow"">
+  <hr class="opacity-0">
+</div>
+
+<div class="mx-auto" style="width: 30em;">
+  <div class="card shadow text-center">
+    <div class="card-header">
+      <h3>Eliminar Cuenta</h3>
+    </div>
+    <div class="card-body">
+      <p>¿Desea cerrar la cuenta definitivamente? Todos los datos serán borrados <%= button_to "Borrar datos", registration_path(resource_name), form: { data: { turbo_confirm: 'Está seguro?' } }, method: :delete, class:"btn shadow-sm btn-danger" %></p>
+    </div>
+  </div>
+</div>
+
+
+

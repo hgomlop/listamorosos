@@ -1,0 +1,43 @@
+<%= form_with(model: moroso) do |form| %>
+  <% if moroso.errors.any? %>
+    <% render  %>
+
+      <ul>
+        <% moroso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form class="form-group">
+    <div class="mb-3 col">
+      <%= form.label :nombre, style: "display: block" %>
+      <%= form.text_field :nombre, class:"form-control" %>
+    </div>
+
+    <div class="mb-3 col">
+      <%= form.label :apellido, style: "display: block" %>
+      <%= form.text_field :apellido, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :deuda, style: "display: block" %>
+      <%= form.text_field :deuda, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :fecha, style: "display: block" %>
+      <%= form.date_field :fecha, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :direccion, style: "display: block" %>
+      <%= form.text_field :direccion, class:"form-control" %>
+    </div>
+    
+    <div>
+      <%= form.submit class:"btn btn-secondary"%> <%= link_to "Volver a la lista", morosos_path, class:"mx-2 btn btn-secondary" %>
+    </div>
+  </form>
+<% end %>

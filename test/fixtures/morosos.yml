@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apellido: MyString
+  deuda: 9.99
+  fecha: 2022-11-07 16:57:49
+  direccion: MyString
+
+two:
+  nombre: MyString
+  apellido: MyString
+  deuda: 9.99
+  fecha: 2022-11-07 16:57:49
+  direccion: MyString
