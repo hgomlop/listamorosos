@@ -1,4 +1,4 @@
- <div class="mx-auto" style="width: 95%;"> 
+ <div class="mx-auto" style="width: 70em;"> 
   <div class="card shadow">
     <div class="card-header">
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
@@ -36,16 +36,20 @@
         
         <br/>
         
-        <div class="actions">
-            <%= f.submit "Guardar cambios", class:"btn btn-secondary shadow-sm" %>             
+        <div class="actions d-flex">
+          <div class="pe-2">
+            <%= f.submit "Guardar cambios", class:"btn btn-secondary shadow-sm" %>
+          </div>
+          <div>         
             <%= link_to "Volver", :back, class:"btn btn-secondary shadow-sm" %>
+          </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 
-<div class="mx-auto" style="width: 60%;">
+<div class="mx-auto" style="width: 55%;">
   <hr class="opacity-0">
   <hr/ class="border border-dark border-1.5 opacity-75 shadow"">
   <hr class="opacity-0">
